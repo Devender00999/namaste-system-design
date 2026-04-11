@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h4 id="result">Hello</h4>
+      <script>
+         async function getData(data) {
+            const res = await fetch(`/data?data=${data}`);
+            const json = await res.json();
+            document.querySelector("#result").innerHTML = json.data;
+            getData(json.data);
+         }
+         getData();
+      </script>
+   </body>
+</html>

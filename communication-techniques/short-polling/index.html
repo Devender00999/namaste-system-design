@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h4 id="result">Hello</h4>
+      <script>
+         async function getData() {
+            const res = await (await fetch("/data")).json();
+            document.querySelector("#result").innerHTML = res.data;
+         }
+         getData();
+
+         // Short polling for every 5 seconds
+         setInterval(() => {
+            getData();
+         }, 5000);
+      </script>
+   </body>
+</html>
