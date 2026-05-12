@@ -1,0 +1,53 @@
+<App>
+   <Header>
+      <Left>
+         <Image>
+      <Right>
+        <Link>
+        <Link>
+        <Link>
+        <Search>
+   <Body>
+      <ScrollableRow>
+         <Card>
+         <Card>
+         <Card>
+         <Card>
+
+
+
+<App>
+  <Navbar>
+    <Left></Left>
+    <Center>
+      <SearchContainer>
+        <Search>
+        </Search>
+      </SearchContainer>
+    </Center>
+    <Right>
+        <Profile></Profile>
+    </Right>
+    </Navbar>
+  <Body>
+    <Left>
+      <Sidebar>
+    </Left>
+    <Right>
+      <ScrollableTags>
+        <Tag></Tag>
+        <Tag></Tag>
+        <Tag></Tag>
+        <Tag></Tag>
+        <Tag></Tag>
+        <Tag></Tag>
+      </ScrollableTags>
+      <ClosableAd></ClosableAd>
+      <VideoCardsContainer>
+        <VideoCard></VideoCard>
+        <VideoCard></VideoCard>
+        <VideoCard></VideoCard>
+        <VideoCard></VideoCard>
+        <VideoCard></VideoCard>
+      </VideoCardsContainer>
+    </Right>

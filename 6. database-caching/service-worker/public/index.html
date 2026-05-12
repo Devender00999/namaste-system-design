@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>HTTP Caching Demo</title>
+      <link rel="stylesheet" href="styles.css" />
+   </head>
+   <body>
+      <div id="content">
+         <h1>HTTP Caching Demo</h1>
+         <p>This demo showcases HTTP caching using the Cache-Control header.</p>
+
+         <h2>Image with Cache-Control</h2>
+         <p>This image will be cached based on the Cache-Control header.</p>
+         <img src="image.gif" alt="Cached Image" id="cachedImage" />
+
+         <h2>Fetch New Image</h2>
+         <p>Click the button to fetch a new image without using the cache.</p>
+         <button onclick="fetchNewImage()">Fetch New Image</button>
+      </div>
+
+      <script>
+         function fetchNewImage() {
+            // Generate a random query parameter to bypass caching
+            const randomQuery = Math.random().toString(36).substring(7);
+
+            // Update the image source with the new query parameter
+            const imgElement = document.getElementById("cachedImage");
+            imgElement.src = `image.gif?${randomQuery}`;
+         }
+      </script>
+      <script>
+         if ("serviceWorker" in navigator) {
+            navigator.serviceWorker
+               .register("./sw.js")
+               .then((registeration) => console.log("Service worker installed with scope " + registeration.scope))
+               .catch((error) => console.log("Failed to install service worker"));
+         }
+      </script>
+   </body>
+</html>
