@@ -5,6 +5,7 @@ import Body from "./components/Body";
 import ProtectedRoute from "./components/ProtectedRoute";
 import LanguageProvider from "./context/LanguageContext";
 import Accordian from "./components/Accordian";
+import Comments from "./components/comments/Comments";
 
 function App() {
    return (
@@ -16,6 +17,7 @@ function App() {
                      <Route path="/" element={<Body />}></Route>
                      <Route path="/about" element={<About />}></Route>
                      <Route path="/accordian" element={<Accordian />}></Route>
+                     <Route path="/comments" element={<Comments />}></Route>
                   </Route>
                </Routes>
             </BrowserRouter>
