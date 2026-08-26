@@ -6,7 +6,7 @@ const Main = () => {
    const { language, setLanguage } = useLanguage();
 
    return (
-      <div>
+      <div style={{ padding: 10 }}>
          <nav style={{ display: "flex", height: 48, marginBottom: 5, gap: 20, position: "sticky", background: "white", alignItems: "center" }}>
             <Link to="/">{translations[language].navbar.home}</Link>
             <Link to="/about">{translations[language].navbar.about}</Link>
