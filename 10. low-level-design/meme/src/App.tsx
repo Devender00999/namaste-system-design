@@ -6,6 +6,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import LanguageProvider from "./context/LanguageContext";
 import Accordian from "./components/Accordian";
 import Comments from "./components/comments/Comments";
+import ImageSlider from "./components/image-slider/indext";
 
 function App() {
    return (
@@ -18,6 +19,7 @@ function App() {
                      <Route path="/about" element={<About />}></Route>
                      <Route path="/accordian" element={<Accordian />}></Route>
                      <Route path="/comments" element={<Comments />}></Route>
+                     <Route path="/image-slider" element={<ImageSlider />}></Route>
                   </Route>
                </Routes>
             </BrowserRouter>
