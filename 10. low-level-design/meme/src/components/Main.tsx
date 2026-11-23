@@ -13,6 +13,7 @@ const Main = () => {
             <Link to="/accordian">Accordian</Link>
             <Link to="/comments">Comments</Link>
             <Link to="/image-slider">Image Slider</Link>
+            <Link to="/pagination">Pagination</Link>
             <select value={language} onChange={(e) => setLanguage(e.target.value as Language)}>
                <option value="en">English</option>
                <option value="hi">Hindi</option>

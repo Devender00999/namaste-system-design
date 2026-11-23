@@ -7,6 +7,7 @@ import LanguageProvider from "./context/LanguageContext";
 import Accordian from "./components/Accordian";
 import Comments from "./components/comments/Comments";
 import ImageSlider from "./components/image-slider/indext";
+import Pagination from "./components/pagination";
 
 function App() {
    return (
@@ -20,6 +21,7 @@ function App() {
                      <Route path="/accordian" element={<Accordian />}></Route>
                      <Route path="/comments" element={<Comments />}></Route>
                      <Route path="/image-slider" element={<ImageSlider />}></Route>
+                     <Route path="/pagination" element={<Pagination />}></Route>
                   </Route>
                </Routes>
             </BrowserRouter>
